@@ -1,0 +1,146 @@
+{
+  "experiment": "CEXP05_Ablation",
+  "run_id": "cexp05_ablation",
+  "seed": 42,
+  "n_eval": 499,
+  "smoke": false,
+  "clean_undef": {
+    "f1": 0.2649,
+    "fpr": 0.0745,
+    "accuracy": 0.3293
+  },
+  "ablation_results": [
+    {
+      "poison_rate": 0.1,
+      "config": "undefended",
+      "use_d1": false,
+      "use_d2": false,
+      "use_d3": false,
+      "f1": 0.222,
+      "fpr": 0.0778,
+      "accuracy": 0.3002,
+      "recovery_R": 0.8381
+    },
+    {
+      "poison_rate": 0.1,
+      "config": "D2_only",
+      "use_d1": false,
+      "use_d2": true,
+      "use_d3": false,
+      "f1": 0.2103,
+      "fpr": 0.0787,
+      "accuracy": 0.2921,
+      "recovery_R": 0.7939
+    },
+    {
+      "poison_rate": 0.1,
+      "config": "full_D1D2D3",
+      "use_d1": true,
+      "use_d2": true,
+      "use_d3": true,
+      "f1": 0.2102,
+      "fpr": 0.0787,
+      "accuracy": 0.2921,
+      "recovery_R": 0.7935
+    },
+    {
+      "poison_rate": 0.1,
+      "config": "D1_only",
+      "use_d1": true,
+      "use_d2": false,
+      "use_d3": false,
+      "f1": 0.222,
+      "fpr": 0.0778,
+      "accuracy": 0.3002,
+      "recovery_R": 0.8381
+    },
+    {
+      "poison_rate": 0.1,
+      "config": "D3_only",
+      "use_d1": false,
+      "use_d2": false,
+      "use_d3": true,
+      "f1": 0.2217,
+      "fpr": 0.0778,
+      "accuracy": 0.3002,
+      "recovery_R": 0.8369
+    },
+    {
+      "poison_rate": 0.1,
+      "config": "D1D2",
+      "use_d1": true,
+      "use_d2": true,
+      "use_d3": false,
+      "f1": 0.2103,
+      "fpr": 0.0787,
+      "accuracy": 0.2921,
+      "recovery_R": 0.7939
+    },
+    {
+      "poison_rate": 0.3,
+      "config": "undefended",
+      "use_d1": false,
+      "use_d2": false,
+      "use_d3": false,
+      "f1": 0.1702,
+      "fpr": 0.0817,
+      "accuracy": 0.2648,
+      "recovery_R": 0.6425
+    },
+    {
+      "poison_rate": 0.3,
+      "config": "D2_only",
+      "use_d1": false,
+      "use_d2": true,
+      "use_d3": false,
+      "f1": 0.1534,
+      "fpr": 0.0838,
+      "accuracy": 0.2454,
+      "recovery_R": 0.5791
+    },
+    {
+      "poison_rate": 0.3,
+      "config": "full_D1D2D3",
+      "use_d1": true,
+      "use_d2": true,
+      "use_d3": true,
+      "f1": 0.1552,
+      "fpr": 0.0836,
+      "accuracy": 0.2475,
+      "recovery_R": 0.5859
+    },
+    {
+      "poison_rate": 0.3,
+      "config": "D1_only",
+      "use_d1": true,
+      "use_d2": false,
+      "use_d3": false,
+      "f1": 0.1702,
+      "fpr": 0.0817,
+      "accuracy": 0.2648,
+      "recovery_R": 0.6425
+    },
+    {
+      "poison_rate": 0.3,
+      "config": "D3_only",
+      "use_d1": false,
+      "use_d2": false,
+      "use_d3": true,
+      "f1": 0.1737,
+      "fpr": 0.0815,
+      "accuracy": 0.2663,
+      "recovery_R": 0.6557
+    },
+    {
+      "poison_rate": 0.3,
+      "config": "D1D2",
+      "use_d1": true,
+      "use_d2": true,
+      "use_d3": false,
+      "f1": 0.1534,
+      "fpr": 0.0838,
+      "accuracy": 0.2454,
+      "recovery_R": 0.5791
+    }
+  ]
+}

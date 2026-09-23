@@ -1,0 +1,13 @@
+{
+  "source_private_repo": "LLM-IDS_RAG (private research workspace)",
+  "public_repo": "D:\\rag-ids-ngennai-2026",
+  "venue": "NGEN-AI 2026 / AISEC track",
+  "excluded": [
+    "Discussion_Docs/",
+    "journ_track/",
+    "Recent_Papers/",
+    "Old_FilterRag/",
+    "ckpt_* / y_pred dumps",
+    "professor review drafts"
+  ]
+}

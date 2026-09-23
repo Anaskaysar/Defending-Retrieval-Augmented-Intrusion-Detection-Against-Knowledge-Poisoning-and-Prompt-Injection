@@ -1,0 +1,108 @@
+{
+  "experiment": "CEXP06_Defense_Baseline",
+  "run_id": "cexp06_filterrag_style_v2",
+  "seed": 42,
+  "n_eval": 499,
+  "B0_description": "Simplified FilterRAG-style hard cosine filter (Edemacu et al. inspired)",
+  "clean_undef": {
+    "f1": 0.2611,
+    "fpr": 0.0749
+  },
+  "baseline_results": [
+    {
+      "poison_rate": 0.01,
+      "undefended": {
+        "f1": 0.2621,
+        "fpr": 0.0747
+      },
+      "filterrag_style_B0": {
+        "f1": 0.1878,
+        "fpr": 0.0824
+      },
+      "full_D1D2D3": {
+        "f1": 0.263,
+        "fpr": 0.0749
+      },
+      "R_B0": 0.7193,
+      "R_full": 1.0073,
+      "B0_TAU": 0.9718429774045945,
+      "B0_M": 20
+    },
+    {
+      "poison_rate": 0.05,
+      "undefended": {
+        "f1": 0.2381,
+        "fpr": 0.077
+      },
+      "filterrag_style_B0": {
+        "f1": 0.1663,
+        "fpr": 0.0839
+      },
+      "full_D1D2D3": {
+        "f1": 0.2295,
+        "fpr": 0.0777
+      },
+      "R_B0": 0.6369,
+      "R_full": 0.879,
+      "B0_TAU": 0.9718429774045945,
+      "B0_M": 20
+    },
+    {
+      "poison_rate": 0.1,
+      "undefended": {
+        "f1": 0.2211,
+        "fpr": 0.078
+      },
+      "filterrag_style_B0": {
+        "f1": 0.1631,
+        "fpr": 0.0842
+      },
+      "full_D1D2D3": {
+        "f1": 0.208,
+        "fpr": 0.0791
+      },
+      "R_B0": 0.6247,
+      "R_full": 0.7966,
+      "B0_TAU": 0.9718429774045945,
+      "B0_M": 20
+    },
+    {
+      "poison_rate": 0.2,
+      "undefended": {
+        "f1": 0.2079,
+        "fpr": 0.0791
+      },
+      "filterrag_style_B0": {
+        "f1": 0.1521,
+        "fpr": 0.0856
+      },
+      "full_D1D2D3": {
+        "f1": 0.198,
+        "fpr": 0.0803
+      },
+      "R_B0": 0.5825,
+      "R_full": 0.7583,
+      "B0_TAU": 0.9718429774045945,
+      "B0_M": 20
+    },
+    {
+      "poison_rate": 0.3,
+      "undefended": {
+        "f1": 0.1702,
+        "fpr": 0.0817
+      },
+      "filterrag_style_B0": {
+        "f1": 0.1359,
+        "fpr": 0.0871
+      },
+      "full_D1D2D3": {
+        "f1": 0.1552,
+        "fpr": 0.0836
+      },
+      "R_B0": 0.5205,
+      "R_full": 0.5944,
+      "B0_TAU": 0.9718429774045945,
+      "B0_M": 20
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "seed": 42,
+    "n_eval": 499,
+    "smoke_test": false,
+    "poison_rates": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "injection_modes": [
+      "multi",
+      "single"
+    ],
+    "note_provenance": "RECONSTRUCTED from the executed notebook's saved print/display outputs (cexp04-scaled-attack-defense-smoketest_42Seed.ipynb) because the Kaggle session ended without a Save Version / working-dir download. NOT the original cexp04_results_cexp04_scaled_seed42_N499.json written by the notebook to /kaggle/working. Missing vs. the original: eval_set_ids (exact test/KB indices used), per-query y_true/y_pred lists, accuracy field, n_valid/n_unknown, exact 4-decimal-precision recovery_R (only 3-decimal display values were printed)."
+  },
+  "paper_table_hint": "Clean (no-poison) baselines for multi/single context width, and per-stage latency (ms) on the clean defended path",
+  "clean": {
+    "undefended_multi": {
+      "f1": 0.2649,
+      "fpr": 0.0745
+    },
+    "defended_full_multi": {
+      "f1": 0.2673,
+      "fpr": 0.0745
+    },
+    "undefended_single_k1": {
+      "f1": 0.156,
+      "fpr": 0.0868
+    },
+    "cexp02_ref_do_not_mix": 0.1237
+  },
+  "latency": {
+    "n": 100,
+    "note": "clean, defended path",
+    "stages_ms": {
+      "embed": {
+        "mean": 34.8,
+        "std": 2.68,
+        "n": 100
+      },
+      "retrieve": {
+        "mean": 5.43,
+        "std": 0.56,
+        "n": 100
+      },
+      "defense": {
+        "mean": 5.43,
+        "std": 0.56,
+        "n": 100
+      },
+      "llm": {
+        "mean": 1872.37,
+        "std": 797.23,
+        "n": 100
+      },
+      "e2e": {
+        "mean": 1918.08,
+        "std": 797.91,
+        "n": 100
+      }
+    }
+  }
+}

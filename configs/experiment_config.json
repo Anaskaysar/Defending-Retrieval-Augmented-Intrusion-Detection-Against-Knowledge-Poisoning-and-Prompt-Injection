@@ -1,0 +1,32 @@
+{
+  "venue": "NGEN-AI 2026 (AISEC track) \u2014 Springer LNCS / CCIS",
+  "review": "single-blind",
+  "dataset": "CIC-UNSW-NB15 (Preprocessed_CIC_UNSW on Kaggle)",
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "k_docs": 5,
+  "kb_per_class": 200,
+  "eval_n_per_class": 50,
+  "n_eval_approx": 499,
+  "poison_rates": [
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "low_volume_counts": [
+    1,
+    2
+  ],
+  "d1_theta": 0.4,
+  "d2_percentile": 95,
+  "lambda_s": 0.3,
+  "embedder": "BAAI/bge-m3",
+  "llm": "mistralai/Mistral-7B-Instruct-v0.2",
+  "max_new_tokens": 32,
+  "do_sample": false
+}

@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "seed": 42,
+    "n_eval": 499,
+    "smoke_test": false,
+    "poison_rates": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "injection_modes": [
+      "multi",
+      "single"
+    ],
+    "note_provenance": "RECONSTRUCTED from the executed notebook's saved print/display outputs (cexp04-scaled-attack-defense-smoketest_42Seed.ipynb) because the Kaggle session ended without a Save Version / working-dir download. NOT the original cexp04_results_cexp04_scaled_seed42_N499.json written by the notebook to /kaggle/working. Missing vs. the original: eval_set_ids (exact test/KB indices used), per-query y_true/y_pred lists, accuracy field, n_valid/n_unknown, exact 4-decimal-precision recovery_R (only 3-decimal display values were printed)."
+  },
+  "paper_table_hint": "Poison sweep: undefended vs full D1+D2+D3 defended, F1/FPR/Recovery-R by poison rate",
+  "rows": [
+    {
+      "poison_rate": 0.01,
+      "undefended": {
+        "f1": 0.2649,
+        "fpr": 0.0745
+      },
+      "defended_full": {
+        "f1": 0.2666,
+        "fpr": 0.0745
+      },
+      "recovery_R": 1.006
+    },
+    {
+      "poison_rate": 0.05,
+      "undefended": {
+        "f1": 0.239,
+        "fpr": 0.0768
+      },
+      "defended_full": {
+        "f1": 0.2304,
+        "fpr": 0.0774
+      },
+      "recovery_R": 0.87
+    },
+    {
+      "poison_rate": 0.1,
+      "undefended": {
+        "f1": 0.222,
+        "fpr": 0.0778
+      },
+      "defended_full": {
+        "f1": 0.2102,
+        "fpr": 0.0787
+      },
+      "recovery_R": 0.793
+    },
+    {
+      "poison_rate": 0.2,
+      "undefended": {
+        "f1": 0.2091,
+        "fpr": 0.0789
+      },
+      "defended_full": {
+        "f1": 0.1991,
+        "fpr": 0.0801
+      },
+      "recovery_R": 0.752
+    },
+    {
+      "poison_rate": 0.3,
+      "undefended": {
+        "f1": 0.1702,
+        "fpr": 0.0817
+      },
+      "defended_full": {
+        "f1": 0.1552,
+        "fpr": 0.0836
+      },
+      "recovery_R": 0.586
+    }
+  ]
+}

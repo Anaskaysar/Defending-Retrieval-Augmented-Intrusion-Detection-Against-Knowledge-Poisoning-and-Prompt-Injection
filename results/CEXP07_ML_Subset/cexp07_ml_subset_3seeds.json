@@ -1,0 +1,119 @@
+{
+  "experiment": "CEXP07_ML_Subset_Eval",
+  "purpose": "Major 3 \u2014 RF/XGB on identical CEXP04 N=499 eval indices (3 seeds)",
+  "models_source": {
+    "rf": "Results/Baselines/rf_cic.pkl (frozen CEXP01)",
+    "xgb": "Results/Baselines/xgb_cic.json (frozen CEXP01)"
+  },
+  "full_partition_reference_do_not_mix": {
+    "note": "CEXP01 full 708k test \u2014 kept for characterization only",
+    "RF_macro_f1": 0.4678,
+    "XGBoost_macro_f1": 0.4752
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "n": 499,
+      "eval_set_ids": "Experiment_Lab/conf_track/Results/Ablation/CEXP05_Ablation/eval_set_ids_N499_seed42.json",
+      "RandomForest": {
+        "accuracy": 0.6513,
+        "macro_f1": 0.6523,
+        "macro_precision": 0.7148,
+        "macro_recall": 0.6509,
+        "macro_fpr": 0.0388
+      },
+      "XGBoost": {
+        "accuracy": 0.6854,
+        "macro_f1": 0.6966,
+        "macro_precision": 0.786,
+        "macro_recall": 0.6851,
+        "macro_fpr": 0.035
+      },
+      "RAG_IDS_clean_undef": {
+        "macro_f1": 0.2649,
+        "macro_fpr": 0.0745,
+        "note": "CEXP04 recovered / CEXP05 clean undef"
+      }
+    },
+    {
+      "seed": 123,
+      "n": 499,
+      "eval_set_ids": "Experiment_Lab/conf_track/Results/Scaled_Eval/CEXP04_ScaledEval_1223Seeds/eval_set_ids_N499_seed123.json",
+      "RandomForest": {
+        "accuracy": 0.6172,
+        "macro_f1": 0.6219,
+        "macro_precision": 0.6833,
+        "macro_recall": 0.6169,
+        "macro_fpr": 0.0425
+      },
+      "XGBoost": {
+        "accuracy": 0.6373,
+        "macro_f1": 0.6537,
+        "macro_precision": 0.7453,
+        "macro_recall": 0.6371,
+        "macro_fpr": 0.0403
+      },
+      "RAG_IDS_clean_undef": {
+        "macro_f1": 0.2879,
+        "macro_fpr": 0.0748,
+        "note": "CEXP04 seed123 clean undef"
+      }
+    },
+    {
+      "seed": 7,
+      "n": 499,
+      "eval_set_ids": "Experiment_Lab/conf_track/Results/Scaled_Eval/CEXpP04_7_Seed/CEXP04_Scaled_Eval_7seed/eval_set_ids_N499_seed7.json",
+      "RandomForest": {
+        "accuracy": 0.6152,
+        "macro_f1": 0.6203,
+        "macro_precision": 0.6992,
+        "macro_recall": 0.6149,
+        "macro_fpr": 0.0428
+      },
+      "XGBoost": {
+        "accuracy": 0.6653,
+        "macro_f1": 0.683,
+        "macro_precision": 0.783,
+        "macro_recall": 0.6651,
+        "macro_fpr": 0.0372
+      },
+      "RAG_IDS_clean_undef": {
+        "macro_f1": 0.2564,
+        "macro_fpr": 0.075,
+        "note": "CEXP04 seed7 clean undef"
+      }
+    }
+  ],
+  "aggregate": {
+    "RandomForest": {
+      "macro_f1": {
+        "mean": 0.6315,
+        "std": 0.018
+      },
+      "macro_fpr": {
+        "mean": 0.0414,
+        "std": 0.0022
+      }
+    },
+    "XGBoost": {
+      "macro_f1": {
+        "mean": 0.6778,
+        "std": 0.0219
+      },
+      "macro_fpr": {
+        "mean": 0.0375,
+        "std": 0.0027
+      }
+    },
+    "RAG_IDS_clean_undef": {
+      "macro_f1": {
+        "mean": 0.2697,
+        "std": 0.0163
+      },
+      "macro_fpr": {
+        "mean": 0.0748,
+        "std": 0.0003
+      }
+    }
+  }
+}

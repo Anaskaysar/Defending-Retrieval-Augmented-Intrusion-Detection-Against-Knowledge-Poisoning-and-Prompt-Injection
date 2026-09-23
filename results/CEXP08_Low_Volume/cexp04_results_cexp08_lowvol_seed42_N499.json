@@ -1,0 +1,88 @@
+{
+  "experiment": "CEXP04_Scaled_Eval",
+  "run_id": "cexp08_lowvol",
+  "config": {
+    "SMOKE_TEST": false,
+    "SEED": 42,
+    "K_DOCS": 5,
+    "KB_PER_CLASS": 200,
+    "EVAL_N_PER_CLASS": 50,
+    "n_eval": 499,
+    "INCLUDE_ALL_CLASSES": true,
+    "POISON_RATES": [],
+    "INJECTION_MODES": [],
+    "INJ_IDX": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "D1_THETA": 0.4,
+    "D2_PERCENTILE": 95,
+    "LAMBDA_S": 0.3,
+    "data_root": "/kaggle/input/datasets/kaysarulanas/preprocessed-cic-unsw/Processed_CIC_UNSW",
+    "proc_cic": "/kaggle/input/datasets/kaysarulanas/preprocessed-cic-unsw/Processed_CIC_UNSW/Processed/CIC"
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "Tesla T4"
+  },
+  "clean": {
+    "undefended": {
+      "f1": 0.2611,
+      "accuracy": 0.3259,
+      "fpr": 0.0749,
+      "n_valid": 494,
+      "n_unknown": 5
+    },
+    "defended_full": {
+      "f1": 0.2638,
+      "accuracy": 0.3259,
+      "fpr": 0.0749,
+      "n_valid": 494,
+      "n_unknown": 5
+    },
+    "cexp02_ref_do_not_mix": 0.1237
+  },
+  "poison_results": [
+    {
+      "poison_rate": null,
+      "n_poison_abs": 1,
+      "poison_rate_equiv": 0.0005,
+      "n_poison": 1,
+      "n_total": 2001,
+      "undefended": {
+        "f1": 0.2611,
+        "fpr": 0.0749,
+        "accuracy": 0.3259
+      },
+      "defended_full": {
+        "f1": 0.2638,
+        "fpr": 0.0749,
+        "accuracy": 0.3259
+      },
+      "recovery_R": 1.0103
+    },
+    {
+      "poison_rate": null,
+      "n_poison_abs": 2,
+      "poison_rate_equiv": 0.001,
+      "n_poison": 2,
+      "n_total": 2002,
+      "undefended": {
+        "f1": 0.2611,
+        "fpr": 0.0749,
+        "accuracy": 0.3259
+      },
+      "defended_full": {
+        "f1": 0.2638,
+        "fpr": 0.0749,
+        "accuracy": 0.3259
+      },
+      "recovery_R": 1.0103
+    }
+  ],
+  "injection_results": [],
+  "latency": null
+}

@@ -1,0 +1,33 @@
+{
+  "n": 100,
+  "hardware": "Tesla T4",
+  "stages_ms": {
+    "embed": {
+      "mean": 35.33,
+      "std": 2.89,
+      "n": 100
+    },
+    "retrieve": {
+      "mean": 5.01,
+      "std": 0.25,
+      "n": 100
+    },
+    "defense": {
+      "mean": 5.01,
+      "std": 0.25,
+      "n": 100
+    },
+    "llm": {
+      "mean": 1727.96,
+      "std": 500.41,
+      "n": 100
+    },
+    "e2e": {
+      "mean": 1773.37,
+      "std": 500.44,
+      "n": 100
+    }
+  },
+  "f1_on_subset": 0.2297,
+  "fpr_on_subset": 0.0544
+}

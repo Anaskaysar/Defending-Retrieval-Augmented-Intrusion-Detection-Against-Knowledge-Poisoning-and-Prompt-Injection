@@ -1,0 +1,43 @@
+# LaTeX build
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+_minted*/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+idsrag/
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets / local
+.env
+*.pem
+*.key
+
+# Fat runtime dumps (never commit)
+**/ckpt_*.json
+**/checkpoint_*.json
+**/eval_set_ids_*.json
+**/__huggingface_repos__.json
+**/__results___files/
+
+# Manuscript, internal notes, and planning docs — private research
+# workspace, not part of the public code/data release. Read the published
+# version of the paper at the venue instead.
+conf/
